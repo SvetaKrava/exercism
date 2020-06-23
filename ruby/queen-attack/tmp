@@ -1,0 +1,16 @@
+class Queens
+
+  def initialize(h)
+    h.each_value { |coord|
+      raise ArgumentError unless coord.all? { |c| c.between?(0,7) }
+    }
+    @board = h
+  end
+
+  def attack?
+    (0..1).each { |i| return true if @board[:white][i] == @board[:black][i] }
+    return true if (@board[:white][0] - @board[:black][0]).abs == (@board[:white][1] - @board[:black][1]).abs
+    false
+  end
+
+end
