@@ -1,0 +1,8 @@
+[MASTER]
+
+[MESSAGES CONTROL]
+# Disable docstring checks
+disable=missing-docstring,
+        missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring
