@@ -7,12 +7,10 @@ This is a module docstring, used to describe the functionality
 of a module and its functions and/or classes.
 """
 
+EXPECTED_BAKE_TIME = 40
+PREPARATION_TIME = 2
 
-#TODO: define your EXPECTED_BAKE_TIME (required) and PREPARATION_TIME (optional) constants below.
-
-
-#TODO: Remove 'pass' and complete the 'bake_time_remaining()' function below.
-def bake_time_remaining():
+def bake_time_remaining(elapsed_bake_time):
     """Calculate the bake time remaining.
 
     :param elapsed_bake_time: int - baking time already elapsed.
@@ -23,19 +21,31 @@ def bake_time_remaining():
     based on the `EXPECTED_BAKE_TIME`.
     """
 
-    pass
+    return EXPECTED_BAKE_TIME - elapsed_bake_time
 
+def elapsed_time_in_minutes(number_of_layers, time=EXPECTED_BAKE_TIME):
+    """Calculate the total elapsed time in minutes.
 
-#TODO: Define the 'preparation_time_in_minutes()' function below.
-# To avoid the use of magic numbers (see: https://en.wikipedia.org/wiki/Magic_number_(programming)), you should define a PREPARATION_TIME constant.
-# You can do that on the line below the 'EXPECTED_BAKE_TIME' constant.
-# This will make it easier to do calculations, and make changes to your code.
+    :param number_of_layers: int - number of layers added to the lasagna.
+    :return: int - total time (in minutes) spent cooking the lasagna.
 
+    This function takes the number of layers added to the lasagna as
+    an argument and returns the total time spent cooking the lasagna,
+    which is the sum of the preparation time and the baking time.
+    """
 
+    preparation_time = preparation_time_in_minutes(number_of_layers)
+    total_time = preparation_time + time
+    return total_time
 
-#TODO: define the 'elapsed_time_in_minutes()' function below.
+def preparation_time_in_minutes(number_of_layers, time=PREPARATION_TIME):
+    """Calculate the preparation time in minutes.
 
+    :param number_of_layers: int - number of layers added to the lasagna.
+    :return: int - total preparation time (in minutes).
 
+    This function takes the number of layers added to the lasagna as
+    an argument and returns the total preparation time.
+    """
 
-# TODO: Remember to go back and add docstrings to all your functions
-#  (you can copy and then alter the one from bake_time_remaining.)
+    return number_of_layers * time
