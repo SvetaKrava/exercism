@@ -1,10 +1,11 @@
-# pyright: ignore
+# mypy: ignore-errors
 
-[MASTER] # pyright: ignore[reportUndefinedVariable]
+[MAIN] 
+ignore-patern=**/pylintrc
 
 [MESSAGES CONTROL]
 # Disable docstring checks
-disable=missing-docstring, # pyright: ignore[reportUndefinedVariable]
-        missing-module-docstring, # pyright: ignore[reportUndefinedVariable]
+disable=missing-docstring, 
+        missing-module-docstring,
         missing-class-docstring,
-        missing-function-docstring # pyright: ignore[reportUndefinedVariable]
+        missing-function-docstring
