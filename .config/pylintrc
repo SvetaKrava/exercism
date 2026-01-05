@@ -1,8 +1,10 @@
-[MASTER]
+# pyright: ignore
+
+[MASTER] # pyright: ignore[reportUndefinedVariable]
 
 [MESSAGES CONTROL]
 # Disable docstring checks
-disable=missing-docstring,
-        missing-module-docstring,
+disable=missing-docstring, # pyright: ignore[reportUndefinedVariable]
+        missing-module-docstring, # pyright: ignore[reportUndefinedVariable]
         missing-class-docstring,
-        missing-function-docstring
+        missing-function-docstring # pyright: ignore[reportUndefinedVariable]

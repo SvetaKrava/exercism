@@ -24,6 +24,7 @@ def value_of_card(card):
 
     return int(card)
 
+
 def higher_card(card_one, card_two):
     """Determine which card has a higher value in the hand.
 
@@ -42,6 +43,7 @@ def higher_card(card_one, card_two):
         return card_one, card_two
 
     return card_one if value_one > value_two else card_two
+
 
 def value_of_ace(card_one, card_two):
     """Calculate the most advantageous value for the ace card.

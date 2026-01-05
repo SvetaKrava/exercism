@@ -1,5 +1,5 @@
 import unittest
-import pytest
+import pytest # pyright: ignore[reportMissingImports]
 from strings import (add_prefix_un,
                      make_word_groups,
                      remove_suffix_ness,
